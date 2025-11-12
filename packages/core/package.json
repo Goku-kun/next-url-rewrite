@@ -1,0 +1,65 @@
+{
+  "name": "@gokukun/next-url-rewrite-core",
+  "version": "0.2.0",
+  "description": "Framework-agnostic URL pattern matching and rewriting",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix"
+  },
+  "keywords": [
+    "url",
+    "rewrite",
+    "pattern-matching",
+    "routing",
+    "middleware",
+    "typescript"
+  ],
+  "author": "Dharmarajsinh Jethva",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Goku-kun/next-url-rewrite.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/Goku-kun/next-url-rewrite/issues"
+  },
+  "homepage": "https://github.com/Goku-kun/next-url-rewrite#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsdown": "^0.16.3",
+    "typescript": "^5.3.0",
+    "vitest": "^1.1.0"
+  }
+}
