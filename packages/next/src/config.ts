@@ -36,7 +36,7 @@ export async function loadConfig(
   try {
     // Dynamic import works for both CJS and ESM
     const fileUrl = pathToFileURL(configPath).href;
-    const module = await import(fileUrl);
+    const module = await import(/* webpackIgnore: true */ fileUrl);
 
     // Handle default export or direct export
     let config = module.default || module;

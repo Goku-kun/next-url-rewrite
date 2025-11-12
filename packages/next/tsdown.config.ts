@@ -8,5 +8,6 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   treeshake: true,
-  external: ["next"],
+  minify: false,
+  external: ["next", "url"],
 });
