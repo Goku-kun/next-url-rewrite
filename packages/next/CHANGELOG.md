@@ -1,4 +1,4 @@
-# @gokukun/next-url-rewrite-next
+# @next-url-rewrite/next
 
 ## 0.2.0
 
@@ -10,7 +10,7 @@
 
   ## Features
 
-  ### @gokukun/next-url-rewrite-core
+  ### @next-url-rewrite/core
   - Pattern matching with wildcard support
   - Segment-based URL rewriting
   - Multi-rule processing with first-match-wins
@@ -18,7 +18,7 @@
   - Framework-agnostic implementation
   - Dual ESM/CJS builds with proper TypeScript declarations
 
-  ### @gokukun/next-url-rewrite-next
+  ### @next-url-rewrite/next
   - Next.js middleware integration
   - Support for both App Router and Pages Router
   - Config file loader for declarative configuration
@@ -41,4 +41,4 @@
 ### Patch Changes
 
 - Updated dependencies [7f970ae]
-  - @gokukun/next-url-rewrite-core@0.2.0
+  - @next-url-rewrite/core@0.2.0

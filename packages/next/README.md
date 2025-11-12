@@ -1,4 +1,4 @@
-# @gokukun/next-url-rewrite-next
+# @next-url-rewrite/next
 
 Next.js middleware for URL rewriting with pattern matching. Supports both App Router and Pages Router.
 
@@ -10,16 +10,16 @@ Next.js middleware for URL rewriting with pattern matching. Supports both App Ro
 - **Type-safe** - Full TypeScript support with autocomplete
 - **Auto-detection** - Automatically detects router type
 - **Debug logging** - Built-in debugging for development
-- **Zero dependencies** (except @gokukun/next-url-rewrite-core and Next.js)
+- **Zero dependencies** (except @next-url-rewrite/core and Next.js)
 
 ## Installation
 
 ```bash
-npm install @gokukun/next-url-rewrite-next
+npm install @next-url-rewrite/next
 # or
-pnpm add @gokukun/next-url-rewrite-next
+pnpm add @next-url-rewrite/next
 # or
-yarn add @gokukun/next-url-rewrite-next
+yarn add @next-url-rewrite/next
 ```
 
 ## Quick Start
@@ -44,7 +44,7 @@ module.exports = [
 **2. Create `middleware.ts`:**
 
 ```typescript
-import { createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { createMiddleware } from "@next-url-rewrite/next";
 import rewrites from "./rewrites.config.js";
 
 export default createMiddleware(rewrites, { debug: true });
@@ -59,7 +59,7 @@ export const config = {
 **Create `middleware.ts`:**
 
 ```typescript
-import { rewrite, createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { rewrite, createMiddleware } from "@next-url-rewrite/next";
 
 const profileCertificates = rewrite()
   .match("/:username/certificates")
@@ -100,7 +100,7 @@ function createMiddleware(
 **Example:**
 
 ```typescript
-import { createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { createMiddleware } from "@next-url-rewrite/next";
 
 const rules = [
   {
@@ -139,7 +139,7 @@ function loadConfig(
 **Example:**
 
 ```typescript
-import { loadConfig, createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { loadConfig, createMiddleware } from "@next-url-rewrite/next";
 import { join } from "path";
 
 const configPath = join(process.cwd(), "rewrites.config.js");
@@ -161,7 +161,7 @@ function rewrite(): RewriteBuilder;
 **Example:**
 
 ```typescript
-import { rewrite } from "@gokukun/next-url-rewrite-next";
+import { rewrite } from "@next-url-rewrite/next";
 
 const rule = rewrite()
   .match("/api/:version/users")
@@ -251,7 +251,7 @@ const rule = rewrite()
 Rules are processed in order, first match wins:
 
 ```typescript
-import { rewrite, createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { rewrite, createMiddleware } from "@next-url-rewrite/next";
 
 const rules = [
   // More specific rules first
@@ -328,7 +328,7 @@ export default createMiddleware(legacyRewrites);
 
 ```typescript
 // middleware.ts
-import { rewrite, createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { rewrite, createMiddleware } from "@next-url-rewrite/next";
 
 export default createMiddleware(
   rewrite().match("/:username/profile").stripSegment("profile").build()
@@ -351,7 +351,7 @@ app/
 
 ```typescript
 // middleware.ts (same as App Router!)
-import { rewrite, createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { rewrite, createMiddleware } from "@next-url-rewrite/next";
 
 export default createMiddleware(
   rewrite().match("/:username/profile").stripSegment("profile").build()
@@ -398,7 +398,7 @@ import type {
   LoadConfigOptions,
   RewriteRule,
   RewritePattern,
-} from "@gokukun/next-url-rewrite-next";
+} from "@next-url-rewrite/next";
 ```
 
 ## Next.js 16 Compatibility
@@ -431,7 +431,7 @@ module.exports = {
 **After (middleware.ts):**
 
 ```typescript
-import { rewrite, createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { rewrite, createMiddleware } from "@next-url-rewrite/next";
 
 export default createMiddleware(
   rewrite()
@@ -486,7 +486,7 @@ const rules = [
 Enable validation in development:
 
 ```typescript
-import { loadConfig } from "@gokukun/next-url-rewrite-next";
+import { loadConfig } from "@next-url-rewrite/next";
 
 const rules = await loadConfig("./rewrites.config.js", {
   validate: process.env.NODE_ENV === "development",

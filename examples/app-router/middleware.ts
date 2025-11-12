@@ -1,4 +1,4 @@
-import { rewrite, createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { rewrite, createMiddleware } from "@next-url-rewrite/next";
 
 // Using fluent builder API
 const profileCertificates = rewrite()

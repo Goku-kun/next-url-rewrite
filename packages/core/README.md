@@ -1,4 +1,4 @@
-# @gokukun/next-url-rewrite-core
+# @next-url-rewrite/core
 
 Framework-agnostic URL rewriting engine with pattern matching and rule processing.
 
@@ -14,11 +14,11 @@ Framework-agnostic URL rewriting engine with pattern matching and rule processin
 ## Installation
 
 ```bash
-npm install @gokukun/next-url-rewrite-core
+npm install @next-url-rewrite/core
 # or
-pnpm add @gokukun/next-url-rewrite-core
+pnpm add @next-url-rewrite/core
 # or
-yarn add @gokukun/next-url-rewrite-core
+yarn add @next-url-rewrite/core
 ```
 
 ## Core Concepts
@@ -65,7 +65,7 @@ After matching, segments can be removed by their index:
 Tests if a URL pathname matches a pattern.
 
 ```typescript
-import { matchPattern } from "@gokukun/next-url-rewrite-core";
+import { matchPattern } from "@next-url-rewrite/core";
 
 const pattern = {
   segments: ["users", "*", "profile"],
@@ -83,7 +83,7 @@ const result = matchPattern("/users/alice/profile", pattern);
 Matches and rewrites a URL in one operation.
 
 ```typescript
-import { rewriteUrl } from "@gokukun/next-url-rewrite-core";
+import { rewriteUrl } from "@next-url-rewrite/core";
 
 const pattern = {
   segments: ["*", "certificates"],
@@ -105,7 +105,7 @@ const result = rewriteUrl("/alice/certificates", pattern);
 Applies the first matching rule from an array of rules.
 
 ```typescript
-import { processRules } from "@gokukun/next-url-rewrite-core";
+import { processRules } from "@next-url-rewrite/core";
 
 const rules = [
   {
@@ -140,7 +140,7 @@ const result = processRules("/alice/certificates", rules);
 Validates a single rule for configuration errors.
 
 ```typescript
-import { validateRule } from "@gokukun/next-url-rewrite-core";
+import { validateRule } from "@next-url-rewrite/core";
 
 const rule = {
   name: "invalid-rule",
@@ -163,7 +163,7 @@ const result = validateRule(rule);
 Validates multiple rules and detects rule shadowing.
 
 ```typescript
-import { validateRules } from "@gokukun/next-url-rewrite-core";
+import { validateRules } from "@next-url-rewrite/core";
 
 const rules = [
   {
@@ -263,7 +263,7 @@ import type {
   MatchResult,
   RewriteUrlResult,
   ParsedSegment,
-} from "@gokukun/next-url-rewrite-core";
+} from "@next-url-rewrite/core";
 ```
 
 ## Performance

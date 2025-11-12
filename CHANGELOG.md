@@ -11,8 +11,8 @@ Initial release coming soon!
 
 ### Added
 
-- Framework-agnostic URL rewriting engine (`@gokukun/next-url-rewrite-core`)
-- Next.js middleware integration (`@gokukun/next-url-rewrite-next`)
+- Framework-agnostic URL rewriting engine (`@next-url-rewrite/core`)
+- Next.js middleware integration (`@next-url-rewrite/next`)
 - Pattern matching with wildcard support
 - Fluent builder API for programmatic configuration
 - Config file loader for declarative configuration

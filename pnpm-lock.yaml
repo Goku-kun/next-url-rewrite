@@ -44,7 +44,7 @@ importers:
 
   examples/app-router:
     dependencies:
-      '@gokukun/next-url-rewrite-next':
+      '@next-url-rewrite/next':
         specifier: workspace:*
         version: link:../../packages/next
       react:
@@ -69,7 +69,7 @@ importers:
 
   examples/pages-router:
     dependencies:
-      '@gokukun/next-url-rewrite-next':
+      '@next-url-rewrite/next':
         specifier: workspace:*
         version: link:../../packages/next
       react:
@@ -109,7 +109,7 @@ importers:
 
   packages/next:
     dependencies:
-      '@gokukun/next-url-rewrite-core':
+      '@next-url-rewrite/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:

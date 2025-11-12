@@ -1,5 +1,5 @@
-import { processRules } from "@gokukun/next-url-rewrite-core";
-import type { RewriteRule } from "@gokukun/next-url-rewrite-core";
+import { processRules } from "@next-url-rewrite/core";
+import type { RewriteRule } from "@next-url-rewrite/core";
 import type { MiddlewareOptions, NextMiddleware } from "./types";
 
 // Declare global NextResponse type
@@ -57,7 +57,7 @@ function getFullUrl(request: any): URL {
  * @example
  * ```typescript
  * // middleware.ts
- * import { createMiddleware } from '@gokukun/next-url-rewrite-next'
+ * import { createMiddleware } from '@next-url-rewrite/next'
  *
  * export default createMiddleware([
  *   {

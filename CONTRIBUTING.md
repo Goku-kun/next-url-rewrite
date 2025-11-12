@@ -66,7 +66,7 @@ pnpm test
 pnpm test --watch
 
 # Run tests for specific package
-pnpm --filter @gokukun/next-url-rewrite-core test
+pnpm --filter @next-url-rewrite/core test
 ```
 
 ### Type Checking
@@ -76,7 +76,7 @@ pnpm --filter @gokukun/next-url-rewrite-core test
 pnpm type-check
 
 # Type check specific package
-pnpm --filter @gokukun/next-url-rewrite-core type-check
+pnpm --filter @next-url-rewrite/core type-check
 ```
 
 ### Linting
@@ -86,8 +86,8 @@ pnpm --filter @gokukun/next-url-rewrite-core type-check
 pnpm lint
 
 # Lint and auto-fix issues
-pnpm --filter @gokukun/next-url-rewrite-core lint:fix
-pnpm --filter @gokukun/next-url-rewrite-next lint:fix
+pnpm --filter @next-url-rewrite/core lint:fix
+pnpm --filter @next-url-rewrite/next lint:fix
 ```
 
 ### Code Formatting
@@ -110,7 +110,7 @@ pnpm build
 pnpm dev
 
 # Build specific package
-pnpm --filter @gokukun/next-url-rewrite-core build
+pnpm --filter @next-url-rewrite/core build
 ```
 
 ### Running Examples

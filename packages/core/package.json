@@ -1,5 +1,5 @@
 {
-  "name": "@gokukun/next-url-rewrite-core",
+  "name": "@next-url-rewrite/core",
   "version": "0.2.0",
   "description": "Framework-agnostic URL pattern matching and rewriting",
   "main": "./dist/index.cjs",

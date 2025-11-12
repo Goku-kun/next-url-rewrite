@@ -4,7 +4,7 @@ export type {
   RewritePattern,
   RewriteResult,
   ValidationResult,
-} from "@gokukun/next-url-rewrite-core";
+} from "@next-url-rewrite/core";
 
 export { createMiddleware } from "./middleware";
 export { loadConfig } from "./config";

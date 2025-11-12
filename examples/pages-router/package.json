@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@gokukun/next-url-rewrite-next": "workspace:*",
+    "@next-url-rewrite/next": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

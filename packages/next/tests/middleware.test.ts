@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
 import { createMiddleware } from "../src/middleware";
-import type { RewriteRule } from "@gokukun/next-url-rewrite-core";
+import type { RewriteRule } from "@next-url-rewrite/core";
 
 // Mock Next.js Request and Response
 class MockRequest {

@@ -16,13 +16,13 @@ Type-safe URL rewriting for Next.js with pattern matching and middleware support
 ## Quick Start
 
 ```bash
-pnpm add @gokukun/next-url-rewrite-next
+pnpm add @next-url-rewrite/next
 ```
 
 Create `middleware.ts`:
 
 ```typescript
-import { rewrite, createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { rewrite, createMiddleware } from "@next-url-rewrite/next";
 
 const profileCertificates = rewrite()
   .match("/:username/certificates")
@@ -42,12 +42,12 @@ Now `/alice/certificates` automatically rewrites to `/alice`!
 
 This is a monorepo containing:
 
-### [@gokukun/next-url-rewrite-core](./packages/core)
+### [@next-url-rewrite/core](./packages/core)
 
 Framework-agnostic URL rewriting engine with pattern matching.
 
 ```typescript
-import { processRules } from "@gokukun/next-url-rewrite-core";
+import { processRules } from "@next-url-rewrite/core";
 
 const result = processRules("/alice/certificates", [
   {
@@ -62,14 +62,14 @@ const result = processRules("/alice/certificates", [
 
 [**View Core Documentation →**](./packages/core)
 
-### [@gokukun/next-url-rewrite-next](./packages/next)
+### [@next-url-rewrite/next](./packages/next)
 
 Next.js middleware integration with two configuration styles:
 
 **Config File Approach:**
 
 ```typescript
-import { createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { createMiddleware } from "@next-url-rewrite/next";
 import rewrites from "./rewrites.config.js";
 
 export default createMiddleware(rewrites);
@@ -78,7 +78,7 @@ export default createMiddleware(rewrites);
 **Fluent Builder API:**
 
 ```typescript
-import { rewrite, createMiddleware } from "@gokukun/next-url-rewrite-next";
+import { rewrite, createMiddleware } from "@next-url-rewrite/next";
 
 export default createMiddleware(
   rewrite()
@@ -215,7 +215,7 @@ Remove matched segments by index:
 Catch configuration errors at build time:
 
 ```typescript
-import { validateRules } from "@gokukun/next-url-rewrite-core";
+import { validateRules } from "@next-url-rewrite/core";
 
 const result = validateRules(rules);
 if (!result.valid) {
@@ -256,7 +256,7 @@ Next.js supports rewrites in `next.config.js`, but middleware-based rewrites off
 
 ```
 ┌─────────────────────────────────────────┐
-│   @gokukun/next-url-rewrite-next                │
+│   @next-url-rewrite/next                │
 │   (Next.js Middleware Integration)      │
 │                                         │
 │   • createMiddleware()                  │
@@ -267,7 +267,7 @@ Next.js supports rewrites in `next.config.js`, but middleware-based rewrites off
                 │ depends on
                 │
 ┌───────────────▼─────────────────────────┐
-│   @gokukun/next-url-rewrite-core                │
+│   @next-url-rewrite/core                │
 │   (Framework-agnostic Engine)           │
 │                                         │
 │   • Pattern Matching                    │

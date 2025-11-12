@@ -1,5 +1,5 @@
-import { validateRules } from "@gokukun/next-url-rewrite-core";
-import type { RewriteRule } from "@gokukun/next-url-rewrite-core";
+import { validateRules } from "@next-url-rewrite/core";
+import type { RewriteRule } from "@next-url-rewrite/core";
 import { pathToFileURL } from "url";
 
 /**

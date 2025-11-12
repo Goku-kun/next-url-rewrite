@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div style={{ padding: "2rem" }}>
       <h1>App Router Example</h1>
-      <p>Testing URL rewrites with @gokukun/next-url-rewrite-next</p>
+      <p>Testing URL rewrites with @next-url-rewrite/next</p>
 
       <h2>Test Links:</h2>
       <ul>

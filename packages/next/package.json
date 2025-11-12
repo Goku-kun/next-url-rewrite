@@ -1,5 +1,5 @@
 {
-  "name": "@gokukun/next-url-rewrite-next",
+  "name": "@next-url-rewrite/next",
   "version": "0.2.0",
   "description": "Next.js middleware for URL rewriting",
   "main": "./dist/index.cjs",
@@ -59,7 +59,7 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@gokukun/next-url-rewrite-core": "workspace:*"
+    "@next-url-rewrite/core": "workspace:*"
   },
   "peerDependencies": {
     "next": ">=12.0.0"
